@@ -1,3 +1,6 @@
+#ifndef VECTOR_H
+#define VECTOR_H
+
 #include <vector>
 
 class geom_vector {
@@ -13,7 +16,7 @@ class geom_vector {
 
     int size();
 
-    void print_comps();
+    void print();
 
     double norm();
 
@@ -36,3 +39,5 @@ class geom_vector {
     private:
     std::vector<double> m_comps;
 };
+
+#endif
