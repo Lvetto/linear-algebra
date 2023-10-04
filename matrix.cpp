@@ -117,3 +117,10 @@ matrix matrix::operator*(const matrix b) const {
     return out;
 }
 
+geom_vector matrix::operator*(const geom_vector b) const {
+    std::vector<double> out_vec;
+    for (int i=0; i<b.size(); i++)
+        out_vec.push_back(this->row(i)*b);
+    return geom_vector(out_vec);
+}
+

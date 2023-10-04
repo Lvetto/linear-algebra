@@ -36,6 +36,8 @@ class matrix {
 
     matrix operator*(const matrix b) const;
 
+    geom_vector operator*(const geom_vector b) const;
+
     private:
 
     int index(int x, int y) const;    // transforms x,y coords to vector index

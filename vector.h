@@ -14,11 +14,11 @@ class geom_vector {
 
     // functions
 
-    int size();
+    int size() const;
 
-    void print();
+    void print() const;
 
-    double norm();
+    double norm() const;
 
     // operators
 

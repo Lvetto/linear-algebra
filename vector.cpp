@@ -21,7 +21,7 @@ double geom_vector::operator[](int index) const {
     return m_comps[index];
 };
 
-int geom_vector::size() {
+int geom_vector::size() const {
     return static_cast<int>(m_comps.size());
 }
 
@@ -38,7 +38,7 @@ geom_vector geom_vector::operator+(const geom_vector b) const {
     return geom_vector(out_vec);
 };
 
-void geom_vector::print() {
+void geom_vector::print() const {
     std::cout << "(";
     for (int i=0; i<this->size(); i++)
         std::cout << (*this)[i] << " ";
@@ -96,7 +96,7 @@ geom_vector geom_vector::operator/(const double b) const {
     return geom_vector(out_vec);
 };
 
-double geom_vector::norm() {
+double geom_vector::norm() const {
     double t = 0;
     for (int i=0; i<(*this).size(); i++)
         t += pow((*this)[i], 2);
