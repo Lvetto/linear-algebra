@@ -1,0 +1,6 @@
+main.cpp
+makefile
+*.o
+*/*.o
+token
+progr
