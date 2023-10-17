@@ -1,0 +1,12 @@
+FILENAMES := linear-algebra/vector linear-algebra/matrix
+
+OBJECT_FILES := $(addsuffix .o, $(FILENAMES))
+linalg_OBJECTS := $(OBJECT_FILES)
+linalg_FLAGS :=
+
+# compile generic target to object file (keeps file location)
+%.o:	%.cpp %.h
+	g++ -c $< -o $@
+
+# compile the library
+graphics:	$(OBJECT_FILES)
